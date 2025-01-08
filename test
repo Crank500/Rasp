@@ -1,0 +1,22 @@
+# Імпортуємо бібліотеку Tkinter
+import tkinter as tk
+
+# Створюємо головне вікно
+root = tk.Tk()
+root.title("Моя програма на Raspberry Pi")
+root.geometry("400x300")  # Розміри вікна (ширина x висота)
+
+# Функція, яка викликається при натисканні на кнопку
+def on_button_click():
+    label.config(text="Вітаю, ви натиснули кнопку!")
+
+# Додаємо елемент Label (мітка) для відображення тексту
+label = tk.Label(root, text="Це моя програма.", font=("Arial", 14))
+label.pack(pady=20)
+
+# Додаємо кнопку, яка викликає функцію on_button_click при натисканні
+button = tk.Button(root, text="Натисни мене", command=on_button_click, font=("Arial", 12))
+button.pack(pady=10)
+
+# Запускаємо головний цикл програми
+root.mainloop()
