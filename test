@@ -20,3 +20,25 @@ button.pack(pady=10)
 
 # Запускаємо головний цикл програми
 root.mainloop()
+# Встановлюємо вікно на весь екран
+root.attributes("-fullscreen", True)
+
+# Можна також приховати панель заголовка (опціонально)
+root.attributes("-topmost", True)
+
+# Задаємо фон вікна (опціонально)
+root.configure(bg="lightblue")
+
+# Функція для закриття програми при натисканні клавіші "Esc"
+def close(event=None):
+    root.destroy()
+
+# Прив'язуємо клавішу Esc до закриття вікна
+root.bind("<Escape>", close)
+
+# Створюємо текстову мітку
+label = tk.Label(root, text="Це вікно на весь екран!", font=("Arial", 36), bg="lightblue")
+label.pack(expand=True)  # Вирівнюємо мітку по центру
+
+# Запускаємо головний цикл програми
+root.mainloop()
